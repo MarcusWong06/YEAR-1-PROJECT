@@ -27,11 +27,11 @@
 #define IR_RIGHT  A4   // Black = 0, White = 1
 
 // ================= Speed settings =================
-const int FAST_R  = 110;
-const int FAST_L  = 110;
+const int FAST_R  = 120;
+const int FAST_L  = 120;
 
-const int SLOW_R  = 70;
-const int SLOW_L  = 70;
+const int SLOW_R  = 80;
+const int SLOW_L  = 80;
 
 const int TURN_SPEED = 200;
 
