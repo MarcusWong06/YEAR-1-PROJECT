@@ -40,7 +40,7 @@ const int TURN_SPEED = 200;
 //const long MIN_STOP_TIME_MS = 5000;
 
 // ================= Distance =================
-const float TICKS_PER_REV = 22.0;
+const float TICKS_PER_REV = 21.0;
 const float WHEEL_CIRC = 21.3;
 const float CM_PER_TICK = (WHEEL_CIRC / TICKS_PER_REV);
 
