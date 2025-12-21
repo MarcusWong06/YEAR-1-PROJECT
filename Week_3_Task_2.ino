@@ -1,9 +1,5 @@
 /*---Usable Code---*/
 
-/*
--Cannot use sensor fusion for yaw because lack of Magnetometer hence yaw drift is inevitable
-*/
-
 
 /*-----MPU 6050-----*/
 #include <LiquidCrystal.h>//LCD
