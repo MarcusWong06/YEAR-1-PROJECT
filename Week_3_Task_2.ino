@@ -252,7 +252,7 @@ void func_process(){
     gyroY = 0;
   }
   else{
-    pitch = (gyroY - gyroYOffset);
+    pitch = ((gyroY - gyroYOffset) * dt);
   }
 }
 
