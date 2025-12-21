@@ -9,7 +9,6 @@
 #include <LiquidCrystal.h>//LCD
 #include <Wire.h> //I2C communication
 #include <MPU6050.h>//GYRO (DLPF)
-#include <MadgwickAHRS.h>//Sensor fusion algorithmn
 
 
 //Motors -> Ultrasonic sensor referenced as head
@@ -74,8 +73,6 @@ void setup() {
   mpu.setDLPFMode(6); //Set DLPF mode
   mpu.setFullScaleGyroRange(MPU6050_GYRO_FS_250); // Set Gyro range
   mpu.setFullScaleAccelRange(MPU6050_ACCEL_FS_2); // Set Accelerometer range
-  //Filter frequency
-  filter.begin(100);
   //Calibrate Gyro
   func_calibrateGyro();
   lastTime = millis();
@@ -255,7 +252,7 @@ void func_process(){
     gyroY = 0;
   }
   else{
-    pitch = (filter.getPitch() - gyroYOffset);
+    pitch = (gyroY - gyroYOffset);
   }
 }
 
